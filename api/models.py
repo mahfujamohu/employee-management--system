@@ -9,6 +9,7 @@ class Employee(models.Model):
     salary = models.DecimalField(max_digits=10, decimal_places=2)
     joining_date = models.DateField()
     is_active = models.BooleanField(default=True)
+    image = models.ImageField(upload_to="employees/", blank=True, null=True)
 
     def __str__(self):
         return self.name
